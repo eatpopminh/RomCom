@@ -12,14 +12,14 @@ public class Main {
 		boolean flag = true;
 		int numOfDays = Integer.parseInt(lines.get(0));
 		int numOfProbes = Integer.parseInt(lines.get(1));
-		while(flag)
-		{	
-			numOfDays/2
-			if(numOfProbes==1)
-			{
-				break;
-			}
-		}
+//		while(flag)
+//		{	
+//			
+//			if(numOfProbes==1)
+//			{
+//				break;
+//			}
+//		}
 
 	}
 
