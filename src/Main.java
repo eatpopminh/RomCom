@@ -8,61 +8,17 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		List<String> lines = Files.readAllLines(Paths.get("input.txt"));
-		int fuckUpDay = 20;
-		boolean flag = true;
-		int numOfDays = Integer.parseInt(lines.get(0));
-		int numOfProbes = Integer.parseInt(lines.get(1));
-//		while(flag)
-//		{	
-//			
-//			if(numOfProbes==1)
-//			{
-//				break;
-//			}
-//		}
-
-		int maxTurns = (int)(Math.log(216)/Math.log(2))+1;
-		System.out.println(maxTurns);
-//		for(int k = 0 ;k<216 ; k++)
-//		{
-//			double temp = 2*Math.log(216-k)+k;
-//			System.out.println(temp);
-//		}
-		int n = 2, k = 216; 
+	
+		
+		
+		
+		
+		int n = 2, k = 500; 
         System.out.println("Minimum number of trials in worst case with "+n+"  eggs and "+k+ 
                  " floors is "+eggDrop(n, k)); 
 		
 	}
-//	static int eggDrop(int n, int k)  
-//    {  
-//        // If there are no floors, then  
-//        // no trials needed. OR if there  
-//        // is one floor, one trial needed.  
-//        if (k == 1 || k == 0)  
-//            return k;  
-//      
-//        // We need k trials for one egg  
-//        // and k floors  
-//        if (n == 1)  
-//            return k;  
-//      
-//        int min = Integer.MAX_VALUE;  
-//        int x, res;  
-//      
-//        // Consider all droppings from  
-//        //1st floor to kth floor and  
-//        // return the minimum of these  
-//        // values plus 1.  
-//        for (x = 1; x <= k; x++)  
-//        {  
-//            res = Math.max(eggDrop(n-1, x-1),  
-//                        eggDrop(n, k-x));  
-//            if (res < min)  
-//                min = res;  
-//        }  
-//      
-//        return min + 1;  
-//    }
+
 	static int max(int a, int b) { return (a > b)? a: b; } 
     
     /* Function to get minimum number of trials needed in worst 
