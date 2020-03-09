@@ -44,6 +44,7 @@ public class Main {
         	//Loop all floors.
             for (int j = 2; j <= k; j++) 
             { 
+            	//Max_VALUE is just a place holder.
             	attempts[i][j] = Integer.MAX_VALUE; 
                 for (int x = 1; x <= j; x++) 
                 { 
