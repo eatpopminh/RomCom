@@ -49,7 +49,7 @@ public class Main {
                 for (int x = 1; x <= j; x++) 
                 { 
                      int res = 1 + max(attempts[i-1][x-1], attempts[i][j-x]); 
-                     
+                     //Finding the worst case.
                      if (res < attempts[i][j]) 
                     	 attempts[i][j] = res; 
                 } 
