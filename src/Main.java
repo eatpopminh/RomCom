@@ -13,11 +13,11 @@ public class Main {
         		Integer.parseInt(lines.get(0)))); 
 		
 	}
-	//Finding the Bigger Number.
-	static int max(int a, int b) 
-	{ 
-		return (a > b) ? a: b; 
-	} 
+//	//Finding the Bigger Number.
+//	static int max(int a, int b) 
+//	{ 
+//		return (a > b) ? a: b; 
+//	} 
     
 	//Using DP do find the worst case of attempts to find the "bad day".
     static int probing(int n, int k) 
@@ -48,7 +48,7 @@ public class Main {
             	attempts[i][j] = Integer.MAX_VALUE; 
                 for (int x = 1; x <= j; x++) 
                 { 
-                     int res = 1 + max(attempts[i-1][x-1], attempts[i][j-x]); 
+                     int res = 1 + Math.max(attempts[i-1][x-1], attempts[i][j-x]); 
                      //Finding the worst case.
                      if (res < attempts[i][j]) 
                     	 attempts[i][j] = res; 
