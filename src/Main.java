@@ -13,11 +13,6 @@ public class Main {
         		Integer.parseInt(lines.get(0)))); 
 		
 	}
-//	//Finding the Bigger Number.
-//	static int max(int a, int b) 
-//	{ 
-//		return (a > b) ? a: b; 
-//	} 
     
 	//Using DP do find the worst case of attempts to find the "bad day".
     static int probing(int n, int k) 
