@@ -16,6 +16,7 @@ public class Main {
     
 	//Using DP do find the worst case of attempts to find the "bad day".
 	//Having k probe, you can probe thought an array and your goal is to find the "bad day".
+	//O(n^2) since i have two for-loop.
     static int probing(int n, int k) 
     { 
         //2D array to save all data used, so we don't have to recalculate.
@@ -51,7 +52,7 @@ public class Main {
                 } 
             } 
         } 
-           
+          
         //Answer is at the end of the table.
         return array[n][k]; 
   
