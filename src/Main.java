@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -9,15 +10,20 @@ public class Main {
 		// TODO Auto-generated method stub
 		List<String> lines = Files.readAllLines(Paths.get("input.txt"));
 
-        System.out.println(probing(Integer.parseInt(lines.get(1)), 
+        String temp = String.valueOf(probing(Integer.parseInt(lines.get(1)), 
         		Integer.parseInt(lines.get(0)))); 
-		
+        System.out.println(temp);
+        
+        FileWriter write = new FileWriter("output.txt");
+        write.write(temp);
+        write.close();
+
 	}
     
 	//Using DP do find the worst case of attempts to find the "bad day".
 	//Having k probe, you can probe thought an array and your goal is to find the "bad day".
 	//O(n^2) since i have two for-loop.
-    static int probing(int n, int k) 
+    static int probing(int n, int k) throws IOException 
     { 
         //2D array to save all data used, so we don't have to recalculate.
         int array[][] = new int[n+1][k+1]; 
@@ -52,7 +58,7 @@ public class Main {
                 } 
             } 
         } 
-          
+        
         //Answer is at the end of the table.
         return array[n][k]; 
   
