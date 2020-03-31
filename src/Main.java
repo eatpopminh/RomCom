@@ -12,6 +12,7 @@ public class Main {
 
         String temp = String.valueOf(probing(Integer.parseInt(lines.get(1)), 
         		Integer.parseInt(lines.get(0)))); 
+        
         System.out.println(temp);
         
         FileWriter write = new FileWriter("output.txt");
