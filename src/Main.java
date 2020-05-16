@@ -22,20 +22,20 @@ public class Main {
 	}
     
 	//Using DP do find the worst case of attempts to find the "bad day".
-	//Having k probe, you can probe thought an array and your goal is to find the "bad day".
-	//O(n^2) since i have two for-loop.
-    static int probing(int n, int k) throws IOException 
+	//Having n probe, you can probe thought an array and your goal is to find the "bad day".
+	//~O(n^2) since i have two for-loop.
+    public static int probing(int n, int k)
     { 
         //2D array to save all data used, so we don't have to recalculate.
         int array[][] = new int[n+1][k+1]; 
             
-        //Base Case: if floor is 1 = 1 attempt. 
+        //Base Case: if day is 1 = 1 attempt. 
         for (int i = 1; i <= n; i++) 
         { 
         	array[i][1] = 1;      
         } 
            
-        //Base Case: if given only 1 egg = have to loop all the floor.
+        //Base Case: if given only 1 probe = have to loop all the days.
         for (int i = 1; i <= k; i++) 
         {
         	array[1][i] = i; 
@@ -45,7 +45,7 @@ public class Main {
         //Loop all probes.
         for (int i = 2; i <= n; i++) 
         { 
-        	//Loop all floors.
+        	//Loop all days.
             for (int j = 2; j <= k; j++) 
             { 
             	//Max_VALUE is just a place holder.
